@@ -70,10 +70,10 @@ min_score: float = min(client_satisfaction_scores)
 max_score: float = max(client_satisfaction_scores)
 mean_score: float = statistics.mean(client_satisfaction_scores)
 stdev_score: float = statistics.stdev(client_satisfaction_scores)
-min_score: float = min(current_company_ages)
-max_score: float = max(current_company_ages)
-mean_score: float = statistics.mean(current_company_ages)
-stdev_score: float = statistics.stdev(current_company_ages)
+min_age: float = min(current_company_ages)
+max_age: float = max(current_company_ages)
+mean_age: float = statistics.mean(current_company_ages)
+stdev_age: float = statistics.stdev(current_company_ages)
 
 #####################################
 # Declare a global variable named byline.
