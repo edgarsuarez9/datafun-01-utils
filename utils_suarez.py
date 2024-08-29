@@ -1,4 +1,4 @@
-''' ITERATION 3
+''' ITERATION 4
 
 Module: Suarez Analytics - Reusable Module for My Data Analytics Projects
 
@@ -6,24 +6,74 @@ This module provides a simple, reusable foundation for my analytics projects.
 
 Process:
 
-In this third iteration, I declare additional variables to show skills with different data types.'''
+In this fourth iteration, I introduce some basic statistics using Python.
+    - min() is a built in function to find the smallest value passed in
+    - max() is a built in function to find the largest value passed in
+    - The statistics module offers methods to calculate mean and standard deviation.'''
 
 #####################################
-# Declare a global variables - keep byline at the end
-#we will use this information in a smarter byline
+# Import modules at the Top
+#####################################
+
+# In Python, we can import modules to add extra tools and functions. 
+# Below, we're importing:
+# - `statistics`: This gives us tools to calculate things like averages.
+# use CTRL F and type statistics to see where it is used in the code. 
+# Did you find statistic.mean()?
+# Did you find statistics.stdev()?
+
+import statistics
+
+#####################################
+# Declare a global variables
 #####################################
 
 # Boolean variable to indicate if the company has international clients
 has_international_clients: bool = True
 
-#Integer variable for the number of years in operation
+# Boolean variable to indicate if company has a dog
+has_pet_dog: bool = True
+
+# Integer variable for the number of years in operation
 years_in_operation: int = 10
 
-#List of strings representing the skills offered by the company
+# Integer variable for number of dogs company owns
+dogs_company_owns: int = 2
+
+# Float variable for the average client satisfaction scores
+average_client_satisfaction: float = 4.7
+
+# Float variable for the average company ages
+average_company_age: float = 30
+
+# List of strings representing the skills offered by the company
 skills_offered: list = ["Data Analysis", "Machine Learning", "Business Intelligence"]
 
-#List of floats representing individual client satisfaction scores
+# List of name of all pets owned by company
+company_pet_names: list = ["Victor", "Maggie", "Charlie"]
+
+# List of floats representing individual client satisfaction scores
 client_satisfaction_scores: list = [4.8, 4.6, 4.9, 5.0, 4.7]
+
+# List of ages of those in the company_pet_names
+current_company_ages: list = [3, 6, 30, 33, 45, 60]
+
+#####################################
+# Calculate Basic statistics
+#   Do this BEFORE we declare the byline
+#   So the values have been calculated
+#   and are ready for use in the byline.
+#####################################
+
+# Calculate basic stats using built-in functions min(), max(), and statistics module functions mean() and stdev().
+min_score: float = min(client_satisfaction_scores)
+max_score: float = max(client_satisfaction_scores)
+mean_score: float = statistics.mean(client_satisfaction_scores)
+stdev_score: float = statistics.stdev(client_satisfaction_scores)
+min_score: float = min(current_company_ages)
+max_score: float = max(current_company_ages)
+mean_score: float = statistics.mean(current_company_ages)
+stdev_score: float = statistics.stdev(current_company_ages)
 
 #####################################
 # Declare a global variable named byline.
@@ -38,6 +88,10 @@ Has International Clients:  {has_international_clients}
 Years in Operations:        {years_in_operation}
 Skills Offered:             {skills_offered}
 Client Satisfaction scores: {client_satisfaction_scores}
+Has Pet dog                 {has_pet_dog}
+Dogs Company Owns           {dogs_company_owns}
+Company Pet Names           {company_pet_names}
+Current Company Ages        {current_company_ages}
 """
 
 #####################################
