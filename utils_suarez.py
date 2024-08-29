@@ -1,26 +1,12 @@
-''' ITERATION 4
+''' ITERATION 5
 
-Module: Suarez Analytics - Reusable Module for My Data Analytics Projects
+Module: Suarez Analytics - Company and Client Information
 
-This module provides a simple, reusable foundation for my analytics projects. 
-
-Process:
-
-In this fourth iteration, I introduce some basic statistics using Python.
-    - min() is a built in function to find the smallest value passed in
-    - max() is a built in function to find the largest value passed in
-    - The statistics module offers methods to calculate mean and standard deviation.'''
+'''
 
 #####################################
 # Import modules at the Top
 #####################################
-
-# In Python, we can import modules to add extra tools and functions. 
-# Below, we're importing:
-# - `statistics`: This gives us tools to calculate things like averages.
-# use CTRL F and type statistics to see where it is used in the code. 
-# Did you find statistic.mean()?
-# Did you find statistics.stdev()?
 
 import statistics
 
@@ -60,9 +46,6 @@ current_company_ages: list = [3, 6, 30, 33, 45, 60]
 
 #####################################
 # Calculate Basic statistics
-#   Do this BEFORE we declare the byline
-#   So the values have been calculated
-#   and are ready for use in the byline.
 #####################################
 
 # Calculate basic stats using built-in functions min(), max(), and statistics module functions mean() and stdev().
@@ -77,12 +60,11 @@ stdev_age: float = statistics.stdev(current_company_ages)
 
 #####################################
 # Declare a global variable named byline.
-#Make it a multiple f-string to show our information
 #####################################
 
 byline: str = f"""
 ------------------------------------------------------
-Suarez Analytics: Delivering Solutions and Insights
+Suarez Analytics: Company and Client Information
 ------------------------------------------------------
 Has International Clients:  {has_international_clients}
 Years in Operations:        {years_in_operation}
@@ -92,6 +74,14 @@ Has Pet dog                 {has_pet_dog}
 Dogs Company Owns           {dogs_company_owns}
 Company Pet Names           {company_pet_names}
 Current Company Ages        {current_company_ages}
+Minimum Satisfaction Score: {min_score}
+Maximum Satisfaction Score: {max_score}
+Mean Satisfaction Score: {mean_score:.2f}
+Standard Deviation of Satisfaction Scores: {stdev_score:.2f}
+Minimum Company Age: {min_age}
+Maximum Company Age: {max_age}
+Mean Company Age: {mean_age:.2f}
+Standard Deviation of Company Age: {stdev_age:.2f}
 """
 
 #####################################
@@ -117,4 +107,5 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
+    
     
